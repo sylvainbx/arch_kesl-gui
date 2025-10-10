@@ -1,4 +1,4 @@
-# Maintainer: copycat <simakr2512 | at | yandex [DOT] ru>
+# Maintainer: sylvainb
 pkgname=('kesl-gui')
 pkgver=12.3.0.1162
 _pkgverbuild=$(echo ${pkgver} | cut -d "." -f 4)
