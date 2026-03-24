@@ -1,25 +1,24 @@
 # Maintainer: sylvainb
 pkgname=('kesl-gui')
-pkgver=12.3.0.1162
+pkgver=12.4.0.1225
 _pkgverbuild=$(echo ${pkgver} | cut -d "." -f 4)
 _pkgver=$(echo ${pkgver} | cut -d "." -f 1-3)
 pkgrel=1
 arch=('x86_64')
-pkgdesc='Kaspersky Endpoint Security 12.3.0 for Linux (GUI)'
-url='https://support.kaspersky.com/help/KES4Linux/12.3.0/en-US/264264.htm'
+pkgdesc='Kaspersky Endpoint Security 12.4.0 for Linux (GUI)'
+url='https://support.kaspersky.com/help/KES4Linux/12.4.0/en-US/264264.htm'
 license=('custom')
 noextract=("kesl-gui_${_pkgver}-${_pkgverbuild}_amd64.deb")
 depends=('perl' 'kesl' 'freetype2')
 options=("!strip")
-install=${pkgname}.install
-changelog=${pkgname}.changelog
+install="${pkgname}.install"
 
 #https://www.kaspersky.com/small-to-medium-business-security/downloads/endpoint?utm_content=downloads
-#They always change that "3837323739337c44454c7c31" thing so there is no point of generating download link based on pkg version
-source=( "https://products.s.kaspersky-labs.com/endpoints/keslinux10/12.3.0.1162/multilanguage-12.3.0.1162/3939393232337c44454c7c31/kesl-gui_12.3.0-1162_amd64.deb"
+#They always change that "2e87cd4574424b4b88dbcb010ee0f022" thing so there is no point of generating download link based on pkg version
+source=( "https://products.s.kaspersky-labs.com/endpoints/keslinux10/12.4.0.1225/multilanguage-INT-12.4.0.1225/2e87cd4574424b4b88dbcb010ee0f022/kesl-gui_12.4.0-1225_amd64.deb"
          "${pkgname}.install")
 
-sha256sums=('CF981EBB9C0E59BD6F2E364824EAB4F521455B2F689F5FA6B0B06A30DF6BC539'
+sha256sums=('5A8B6E63F4AB3E42AB2A35162DAAE8CFC0C7DEDC64ACCEEB5D66763501F5AB1E'
             '6eb8fdafdd0811ed25d7b36541f8214e1c3b4f9989d8e1df448311535827121a')
 
 validpgpkeys=('6AFE173577C4CBD621DF217FD093435AA3ED2C4A')
